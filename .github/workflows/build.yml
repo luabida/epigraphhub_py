@@ -67,3 +67,7 @@ jobs:
 
     - name: teardown docker container
       run: make docker-compose-stop
+
+    - name: Setup tmate session
+      if: "${{ failure() }}"
+      uses: mxschmitt/action-tmate@v3
