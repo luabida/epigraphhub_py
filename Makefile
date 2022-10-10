@@ -18,13 +18,6 @@ linter:
 	pre-commit run --all-files --verbose
 	poetry run darglint --verbosity 2 epigraphhub_py tests
 
-##* CI
-.PHONY: check-pr-title-label
-check-pr-title-label:
-	pwd
-	chmod +x scripts/ci/pr-title-linter.sh
-	bash scripts/ci/pr-title-linter.sh
-
 #* Tests
 
 .PHONY: test
