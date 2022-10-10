@@ -67,3 +67,12 @@ jobs:
 
     - name: teardown docker container
       run: make docker-compose-stop
+
+    on:
+      pull_request:
+      types: [opened, synchronize]
+
+      print_title_of_pr:
+        steps:
+        - name : Print Title of PR
+          run: echo The Title of your PR is ${{ github.event.pull_request.title }}
