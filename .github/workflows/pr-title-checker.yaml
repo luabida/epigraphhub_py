@@ -30,5 +30,8 @@ jobs:
         shell: bash -l {0}
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
       - name: Check if PR Title contains semantic-release tag
         run: make check-pr-title-label

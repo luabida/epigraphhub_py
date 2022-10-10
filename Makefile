@@ -21,6 +21,7 @@ linter:
 ##* CI
 .PHONY: check-pr-title-label
 check-pr-title-label:
+	pwd
 	chmod +x scripts/ci/pr-title-linter.sh
 	bash scripts/ci/pr-title-linter.sh
 
