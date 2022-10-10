@@ -29,7 +29,6 @@ jobs:
       run:
         shell: bash -l {0}
 
-    if:  ${{ github.event.pull_request.title }} =~ /^(?i)(chore|fix|docs|feat|breaking change|test)\:?(\(.+\)\:)?/
     steps:
       - name: Check if PR Title contains semantic-release tag
-        run: echo passed!
+        run: make check-pr-title-label
